@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Football Alert Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+    button { margin-top: 10px; padding: 10px; }
+    h2 { color: #007acc; }
+  </style>
+</head>
+<body>
+  <h2>Football Alert Bot</h2>
+  <form method="POST" enctype="multipart/form-data">
+    <label>Upload watchlist (.txt):</label><br>
+    <input type="file" name="watchlist" accept=".txt"><br><br>
+    <button type="submit" name="toggle">{{ 'Stop Alerts' if enabled else 'Start Alerts' }}</button>
+  </form>
+  <p>Status: <strong>{{ 'ON' if enabled else 'OFF' }}</strong></p>
+</body>
+</html>
